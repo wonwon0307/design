@@ -14,7 +14,7 @@ export class IconMapFile extends FileToWrite {
 
     // 최상단에 일단 import를 넣어둔다.
     this.addLine(`import type { ComponentType } from "react";`);
-    this.addLine(`import type { IconProps } from "@justkits/svg2tsx";`);
+    this.addLine(`import type { IconProps } from "@wondesign/svg2tsx";`);
     this.addLine("");
 
     this.iconNameTypeLines = ["export type IconName ="];

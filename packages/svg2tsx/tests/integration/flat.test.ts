@@ -75,7 +75,7 @@ describe("generate - flat directory structure", () => {
       expect(atomicWrite).toHaveBeenCalledWith(
         "src/Icon.tsx",
         expect.stringContaining(
-          'import type { IconProps } from "@justkits/svg2tsx"',
+          'import type { IconProps } from "@wondesign/svg2tsx"',
         ),
       );
 

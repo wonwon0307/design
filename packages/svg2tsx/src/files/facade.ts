@@ -12,7 +12,7 @@ export class FacadeComponentFile extends FileToWrite {
     );
 
     const content = [
-      `import type { IconProps } from "@justkits/svg2tsx";`,
+      `import type { IconProps } from "@wondesign/svg2tsx";`,
       "",
       `import { iconMap, type IconName } from "./iconMap";`,
       "",

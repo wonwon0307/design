@@ -10,7 +10,7 @@ const program = new Command();
 
 program
   .name("svg2tsx")
-  .description("JustKits SVG2TSX CLI to generate React components from SVGs")
+  .description("WonDesign SVG2TSX CLI to generate React components from SVGs")
   .version(__PKG_VERSION__)
   .option("-c, --config <path>", "path to config file")
   .option("--dry-run", "preview changes without writing any files")

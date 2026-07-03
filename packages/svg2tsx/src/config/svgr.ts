@@ -42,7 +42,7 @@ export const defaultSvgrConfig: SvgrConfig = {
   exportType: "named",
   template: (variables, { tpl }) => {
     return tpl`
-      import type { IconProps } from "@justkits/svg2tsx";
+      import type { IconProps } from "@wondesign/svg2tsx";
 
       export function ${variables.componentName}({ size = 16,...props }: Readonly<IconProps>) {
         return (${variables.jsx});
