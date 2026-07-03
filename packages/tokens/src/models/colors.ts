@@ -1,0 +1,51 @@
+import { type SemanticColors, wondesignLight } from "@wondesign/colors";
+
+export type { SemanticColors as ColorTokens } from "@wondesign/colors";
+
+export const colorCssVariables: SemanticColors = {
+  primary: "--color-primary",
+  primaryHover: "--color-primary-hover",
+  onPrimary: "--color-primary-foreground",
+  secondary: "--color-secondary",
+  secondaryHover: "--color-secondary-hover",
+  onSecondary: "--color-secondary-foreground",
+  error: "--color-alert-danger",
+  warning: "--color-alert-warning",
+  success: "--color-alert-success",
+  info: "--color-alert-info",
+  background: "--color-background-default",
+  backgroundHover: "--color-background-hover",
+  backgroundInverted: "--color-background-inverted",
+  surface: "--color-background-surface",
+  overlay: "--color-background-overlay",
+  text: "--color-text-default",
+  textMuted: "--color-text-muted",
+  textDisabled: "--color-text-disabled",
+  border: "--color-border-default",
+  borderMuted: "--color-border-muted",
+  borderInverted: "--color-border-inverted",
+};
+
+export const colorTokens: SemanticColors = {
+  primary: `var(${colorCssVariables.primary}, ${wondesignLight.primary})`,
+  primaryHover: `var(${colorCssVariables.primaryHover}, ${wondesignLight.primaryHover})`,
+  onPrimary: `var(${colorCssVariables.onPrimary}, ${wondesignLight.onPrimary})`,
+  secondary: `var(${colorCssVariables.secondary}, ${wondesignLight.secondary})`,
+  secondaryHover: `var(${colorCssVariables.secondaryHover}, ${wondesignLight.secondaryHover})`,
+  onSecondary: `var(${colorCssVariables.onSecondary}, ${wondesignLight.onSecondary})`,
+  error: `var(${colorCssVariables.error}, ${wondesignLight.error})`,
+  warning: `var(${colorCssVariables.warning}, ${wondesignLight.warning})`,
+  success: `var(${colorCssVariables.success}, ${wondesignLight.success})`,
+  info: `var(${colorCssVariables.info}, ${wondesignLight.info})`,
+  background: `var(${colorCssVariables.background}, ${wondesignLight.background})`,
+  backgroundHover: `var(${colorCssVariables.backgroundHover}, ${wondesignLight.backgroundHover})`,
+  backgroundInverted: `var(${colorCssVariables.backgroundInverted}, ${wondesignLight.backgroundInverted})`,
+  surface: `var(${colorCssVariables.surface}, ${wondesignLight.surface})`,
+  overlay: `var(${colorCssVariables.overlay}, ${wondesignLight.overlay})`,
+  text: `var(${colorCssVariables.text}, ${wondesignLight.text})`,
+  textMuted: `var(${colorCssVariables.textMuted}, ${wondesignLight.textMuted})`,
+  textDisabled: `var(${colorCssVariables.textDisabled}, ${wondesignLight.textDisabled})`,
+  border: `var(${colorCssVariables.border}, ${wondesignLight.border})`,
+  borderMuted: `var(${colorCssVariables.borderMuted}, ${wondesignLight.borderMuted})`,
+  borderInverted: `var(${colorCssVariables.borderInverted}, ${wondesignLight.borderInverted})`,
+};

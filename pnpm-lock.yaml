@@ -157,6 +157,12 @@ importers:
         specifier: ^19
         version: 19.2.7
 
+  packages/tokens:
+    devDependencies:
+      '@wondesign/colors':
+        specifier: workspace:*
+        version: link:../colors
+
 packages:
 
   '@asamuzakjp/css-color@5.1.11':
