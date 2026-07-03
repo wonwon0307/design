@@ -145,6 +145,19 @@ importers:
         specifier: ^19
         version: 19.2.7(react@19.2.7)
 
+  packages/icons:
+    dependencies:
+      react:
+        specifier: ^19
+        version: 19.2.7
+      react-dom:
+        specifier: ^19
+        version: 19.2.7(react@19.2.7)
+    devDependencies:
+      '@wondesign/svg2tsx':
+        specifier: workspace:*
+        version: link:../svg2tsx
+
   packages/keyboard:
     dependencies:
       react:
