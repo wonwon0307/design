@@ -1,0 +1,16 @@
+{
+  "name": "@repo/vitest-config",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./next": "./next.js",
+    "./shared": "./shared.js"
+  },
+  "devDependencies": {
+    "@vanilla-extract/vite-plugin": "^5.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "@vitest/coverage-v8": "^4.1.9",
+    "jsdom": "^29.1.1"
+  }
+}
