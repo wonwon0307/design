@@ -1,6 +1,6 @@
 import { defineProject, mergeConfig } from "vitest/config";
 
-import { sharedConfig } from "@justkits/vitest-config/shared";
+import { sharedConfig } from "@repo/vitest-config/shared";
 
 const config = defineProject({
   test: {
