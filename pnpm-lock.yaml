@@ -121,6 +121,15 @@ importers:
 
   packages/colors: {}
 
+  packages/headless-ui:
+    dependencies:
+      react:
+        specifier: ^19
+        version: 19.2.7
+      react-dom:
+        specifier: ^19
+        version: 19.2.7(react@19.2.7)
+
   packages/reset-css: {}
 
   packages/svg2tsx:
