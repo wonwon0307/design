@@ -1,6 +1,6 @@
 import type { SemanticColors } from "../types";
 
-export const wonwonDark: SemanticColors = {
+export const wondesignDark: SemanticColors = {
   primary: "#3B82F6",
   primaryHover: "#3B82F6CC",
   onPrimary: "#F9FAFB",

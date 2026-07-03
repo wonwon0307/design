@@ -1,5 +1,5 @@
-export { wonwonLight } from "./presets/wonwon-light";
-export { wonwonDark } from "./presets/wonwon-dark";
+export { wondesignLight } from "./presets/wondesign-light";
+export { wondesignDark } from "./presets/wondesign-dark";
 
 export { convertToLightDark } from "./utils/light-dark";
 
