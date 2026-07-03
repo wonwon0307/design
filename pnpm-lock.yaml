@@ -119,6 +119,8 @@ importers:
         specifier: ^29.1.1
         version: 29.1.1
 
+  packages/reset-css: {}
+
 packages:
 
   '@asamuzakjp/css-color@5.1.11':
