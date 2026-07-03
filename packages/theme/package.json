@@ -1,0 +1,45 @@
+{
+  "name": "@wondesign/theme",
+  "description": "WonDesign - Theme",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "design",
+    "theme",
+    "colors",
+    "react",
+    "typescript"
+  ],
+  "exports": {
+    "./light-dark": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    },
+    "./light-dark/server": {
+      "import": "./dist/server.mjs",
+      "types": "./dist/server.d.mts"
+    },
+    "./color-scheme.css": "./dist/color-scheme.css"
+  },
+  "author": "WonWon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonwon0307/design.git",
+    "directory": "packages/theme"
+  },
+  "license": "UNLICENSED",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^19"
+  }
+}
