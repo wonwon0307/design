@@ -1,0 +1,30 @@
+{
+  "name": "@wondesign/reset-css",
+  "description": "WonDesign - Reset CSS",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "keywords": [
+    "reset",
+    "css",
+    "design"
+  ],
+  "exports": {
+    "./reset.css": "./dist/reset.css"
+  },
+  "author": "WonWon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonwon0307/design.git",
+    "directory": "packages/reset-css"
+  },
+  "license": "UNLICENSED",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "mkdir -p dist && cp src/reset.css dist/reset.css",
+    "lint": "eslint ."
+  }
+}
