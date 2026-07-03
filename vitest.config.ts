@@ -6,6 +6,7 @@ export default defineConfig({
     coverage: {
       exclude: [
         "**/index.ts",
+        "**/cli.ts",
         "**/*.css.ts",
         "**/*/tests/*",
         "**/dist/*",
