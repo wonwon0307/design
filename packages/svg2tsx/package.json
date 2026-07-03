@@ -1,0 +1,54 @@
+{
+  "name": "@wondesign/svg2tsx",
+  "description": "Wondesign - svg2tsx (icon transformer)",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [
+    "svg",
+    "tsx",
+    "icons",
+    "react",
+    "typescript"
+  ],
+  "author": "WonWon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonwon0307/design.git",
+    "directory": "packages/svg2tsx"
+  },
+  "license": "UNLICENSED",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "svg2tsx": "./dist/cli.mjs"
+  },
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsdown",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "jiti": "^2.7.0"
+  },
+  "devDependencies": {
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "fast-glob": "^3.3.3",
+    "p-limit": "^7.3.0"
+  },
+  "lint-staged": {
+    "*.{yml,yaml}": "prettier --check",
+    "*.{js,mjs,cjs,ts,mts,cts,json,jsonc,json5,md,css,tsx,jsx}": [
+      "eslint",
+      "prettier --check"
+    ]
+  }
+}
