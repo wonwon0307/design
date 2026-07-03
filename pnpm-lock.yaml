@@ -119,6 +119,8 @@ importers:
         specifier: ^29.1.1
         version: 29.1.1
 
+  packages/colors: {}
+
   packages/reset-css: {}
 
   packages/svg2tsx:
