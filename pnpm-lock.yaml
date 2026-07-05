@@ -81,6 +81,69 @@ importers:
         specifier: ^4.1.9
         version: 4.1.9(@types/node@25.9.4)(@vitest/coverage-v8@4.1.9)(jsdom@29.1.1)(vite@8.1.3(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
 
+  components/icons:
+    dependencies:
+      react:
+        specifier: ^19
+        version: 19.2.7
+      react-dom:
+        specifier: ^19
+        version: 19.2.7(react@19.2.7)
+    devDependencies:
+      '@wondesign/svg2tsx':
+        specifier: workspace:*
+        version: link:../../primitives/svg2tsx
+
+  components/keyboard:
+    dependencies:
+      react:
+        specifier: ^19
+        version: 19.2.7
+      react-dom:
+        specifier: ^19
+        version: 19.2.7(react@19.2.7)
+    devDependencies:
+      '@vanilla-extract/css':
+        specifier: 'catalog:'
+        version: 1.20.1
+      '@vanilla-extract/recipes':
+        specifier: 'catalog:'
+        version: 0.5.7(@vanilla-extract/css@1.20.1)
+      '@vanilla-extract/rollup-plugin':
+        specifier: 'catalog:'
+        version: 1.5.3(rollup@4.62.2)
+      '@wondesign/tokens':
+        specifier: workspace:*
+        version: link:../../primitives/tokens
+      clsx:
+        specifier: 'catalog:'
+        version: 2.1.1
+
+  components/texts:
+    dependencies:
+      react:
+        specifier: ^19
+        version: 19.2.7
+      react-dom:
+        specifier: ^19
+        version: 19.2.7(react@19.2.7)
+    devDependencies:
+      '@vanilla-extract/css':
+        specifier: 'catalog:'
+        version: 1.20.1
+      '@vanilla-extract/recipes':
+        specifier: 'catalog:'
+        version: 0.5.7(@vanilla-extract/css@1.20.1)
+      '@vanilla-extract/rollup-plugin':
+        specifier: 'catalog:'
+        version: 1.5.3(rollup@4.62.2)
+      '@wondesign/tokens':
+        specifier: workspace:*
+        version: link:../../primitives/tokens
+      clsx:
+        specifier: 'catalog:'
+        version: 2.1.1
+
   configs/eslint-config:
     devDependencies:
       '@eslint/css':
@@ -134,9 +197,9 @@ importers:
         specifier: ^29.1.1
         version: 29.1.1
 
-  packages/colors: {}
+  primitives/colors: {}
 
-  packages/headless-ui:
+  primitives/headless-ui:
     dependencies:
       react:
         specifier: ^19
@@ -145,47 +208,9 @@ importers:
         specifier: ^19
         version: 19.2.7(react@19.2.7)
 
-  packages/icons:
-    dependencies:
-      react:
-        specifier: ^19
-        version: 19.2.7
-      react-dom:
-        specifier: ^19
-        version: 19.2.7(react@19.2.7)
-    devDependencies:
-      '@wondesign/svg2tsx':
-        specifier: workspace:*
-        version: link:../svg2tsx
+  primitives/reset-css: {}
 
-  packages/keyboard:
-    dependencies:
-      react:
-        specifier: ^19
-        version: 19.2.7
-      react-dom:
-        specifier: ^19
-        version: 19.2.7(react@19.2.7)
-    devDependencies:
-      '@vanilla-extract/css':
-        specifier: 'catalog:'
-        version: 1.20.1
-      '@vanilla-extract/recipes':
-        specifier: 'catalog:'
-        version: 0.5.7(@vanilla-extract/css@1.20.1)
-      '@vanilla-extract/rollup-plugin':
-        specifier: 'catalog:'
-        version: 1.5.3(rollup@4.62.2)
-      '@wondesign/tokens':
-        specifier: workspace:*
-        version: link:../tokens
-      clsx:
-        specifier: 'catalog:'
-        version: 2.1.1
-
-  packages/reset-css: {}
-
-  packages/svg2tsx:
+  primitives/svg2tsx:
     dependencies:
       jiti:
         specifier: ^2.7.0
@@ -213,38 +238,13 @@ importers:
         specifier: ^7.3.0
         version: 7.3.0
 
-  packages/texts:
-    dependencies:
-      react:
-        specifier: ^19
-        version: 19.2.7
-      react-dom:
-        specifier: ^19
-        version: 19.2.7(react@19.2.7)
-    devDependencies:
-      '@vanilla-extract/css':
-        specifier: 'catalog:'
-        version: 1.20.1
-      '@vanilla-extract/recipes':
-        specifier: 'catalog:'
-        version: 0.5.7(@vanilla-extract/css@1.20.1)
-      '@vanilla-extract/rollup-plugin':
-        specifier: 'catalog:'
-        version: 1.5.3(rollup@4.62.2)
-      '@wondesign/tokens':
-        specifier: workspace:*
-        version: link:../tokens
-      clsx:
-        specifier: 'catalog:'
-        version: 2.1.1
-
-  packages/theme:
+  primitives/theme:
     dependencies:
       react:
         specifier: ^19
         version: 19.2.7
 
-  packages/tokens:
+  primitives/tokens:
     devDependencies:
       '@wondesign/colors':
         specifier: workspace:*
