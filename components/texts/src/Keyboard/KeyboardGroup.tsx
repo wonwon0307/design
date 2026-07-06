@@ -1,13 +1,18 @@
 import clsx from "clsx";
 
 import { Keyboard } from "./Keyboard";
-import type { Shortkey } from "@/keys/types";
-import { isMac, parseShortkey } from "@/keys/utils";
+import {
+  formatShortkey,
+  getPlatform,
+  parseShortkey,
+  type Shortkey,
+} from "@wondesign/shortkeys";
 import { styles } from "./styles.css";
 
 export interface KeyboardGroupProps extends React.HTMLAttributes<HTMLElement> {
   keys: Shortkey;
   size?: "small" | "large";
+  platform?: "mac" | "windows";
 }
 
 // KeyboardGroup renders platform-specific symbols (⌘, ⇧, ⌥ on Mac vs Ctrl, Shift, Alt elsewhere).
@@ -16,13 +21,19 @@ export interface KeyboardGroupProps extends React.HTMLAttributes<HTMLElement> {
 export function KeyboardGroup({
   keys,
   size,
+  platform = getPlatform(),
   "aria-label": ariaLabel,
   className,
   ...rest
 }: Readonly<KeyboardGroupProps>) {
-  const { targetKey, ctrlKey, shiftKey, altKey, metaKey } = parseShortkey(keys);
+  const { targetKey, ctrlKey, shiftKey, altKey, metaKey } = parseShortkey(
+    keys,
+    platform,
+  );
 
   const keysToRender: string[] = [];
+
+  const isMac = platform === "mac";
 
   if (ctrlKey) keysToRender.push(isMac ? "^" : "Ctrl");
   if (shiftKey) keysToRender.push(isMac ? "⇧" : "Shift");
@@ -31,7 +42,7 @@ export function KeyboardGroup({
 
   keysToRender.push(targetKey);
 
-  const resolvedLabel = ariaLabel ?? resolveLabel(keys);
+  const resolvedLabel = ariaLabel ?? formatShortkey(keys, platform);
 
   if (keysToRender.length === 1) {
     return (
@@ -59,34 +70,4 @@ export function KeyboardGroup({
       ))}
     </kbd>
   );
-}
-
-function resolveLabel(shortkey: Shortkey): string {
-  return shortkey
-    .split("+")
-    .map((part) => {
-      switch (part) {
-        case "Mod":
-          return isMac ? "Command" : "Control";
-        case "Ctrl":
-        case "Control":
-          return "Control";
-        case "Alt":
-        case "Opt":
-        case "Option":
-          return isMac ? "Option" : "Alt";
-        case "Shift":
-          return "Shift";
-        case "Cmd":
-        case "Command":
-        case "Meta":
-          return "Command";
-        case "Win":
-        case "Windows":
-          return "Windows";
-        default:
-          return part;
-      }
-    })
-    .join(" ");
 }

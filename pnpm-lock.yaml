@@ -94,31 +94,6 @@ importers:
         specifier: workspace:*
         version: link:../../primitives/svg2tsx
 
-  components/keyboard:
-    dependencies:
-      react:
-        specifier: ^19
-        version: 19.2.7
-      react-dom:
-        specifier: ^19
-        version: 19.2.7(react@19.2.7)
-    devDependencies:
-      '@vanilla-extract/css':
-        specifier: 'catalog:'
-        version: 1.20.1
-      '@vanilla-extract/recipes':
-        specifier: 'catalog:'
-        version: 0.5.7(@vanilla-extract/css@1.20.1)
-      '@vanilla-extract/rollup-plugin':
-        specifier: 'catalog:'
-        version: 1.5.3(rollup@4.62.2)
-      '@wondesign/tokens':
-        specifier: workspace:*
-        version: link:../../primitives/tokens
-      clsx:
-        specifier: 'catalog:'
-        version: 2.1.1
-
   components/texts:
     dependencies:
       react:
@@ -137,6 +112,9 @@ importers:
       '@vanilla-extract/rollup-plugin':
         specifier: 'catalog:'
         version: 1.5.3(rollup@4.62.2)
+      '@wondesign/shortkeys':
+        specifier: workspace:*
+        version: link:../../primitives/shortkeys
       '@wondesign/tokens':
         specifier: workspace:*
         version: link:../../primitives/tokens
@@ -209,6 +187,15 @@ importers:
         version: 19.2.7(react@19.2.7)
 
   primitives/reset-css: {}
+
+  primitives/shortkeys:
+    dependencies:
+      react:
+        specifier: ^19
+        version: 19.2.7
+      react-dom:
+        specifier: ^19
+        version: 19.2.7(react@19.2.7)
 
   primitives/svg2tsx:
     dependencies:

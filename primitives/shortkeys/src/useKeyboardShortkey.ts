@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
 
-import type { Shortkey } from "@/keys/types";
-import { parseShortkey } from "@/keys/utils";
+import type { Shortkey } from "./types";
+import { buildAriaKeyshortcuts, parseShortkey } from "./utils";
 
 export interface UseKeyboardShortkeyOptions {
   /** Whether the shortkey listener is active. Defaults to `true`. */
@@ -77,15 +77,4 @@ export function useKeyboardShortkey(
   const ariaKeyshortcuts = key ? buildAriaKeyshortcuts(key) : undefined;
 
   return { ariaKeyshortcuts };
-}
-
-function buildAriaKeyshortcuts(key: Shortkey): string {
-  const { targetKey, ctrlKey, altKey, shiftKey, metaKey } = parseShortkey(key);
-  const parts: string[] = [];
-  if (metaKey) parts.push("Meta");
-  if (ctrlKey) parts.push("Control");
-  if (altKey) parts.push("Alt");
-  if (shiftKey) parts.push("Shift");
-  parts.push(targetKey);
-  return parts.join("+");
 }
