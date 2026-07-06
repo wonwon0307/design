@@ -1,16 +1,13 @@
 {
-  "name": "@wondesign/keyboard",
-  "description": "WonDesign - Keyboard",
+  "name": "@wondesign/shortkeys",
+  "description": "WonDesign - Shortkeys",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "keywords": [
     "design",
     "system",
-    "ui",
-    "components",
     "utilities",
-    "keyboard",
     "shortkeys",
     "hooks",
     "react",
@@ -28,13 +25,6 @@
     "dev": "tsdown --watch",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "@wondesign/tokens": "workspace:*",
-    "@vanilla-extract/css": "catalog:",
-    "@vanilla-extract/recipes": "catalog:",
-    "@vanilla-extract/rollup-plugin": "catalog:",
-    "clsx": "catalog:"
   },
   "peerDependencies": {
     "react": "^19",

@@ -27,10 +27,11 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@wondesign/tokens": "workspace:*",
     "@vanilla-extract/css": "catalog:",
     "@vanilla-extract/recipes": "catalog:",
     "@vanilla-extract/rollup-plugin": "catalog:",
+    "@wondesign/shortkeys": "workspace:*",
+    "@wondesign/tokens": "workspace:*",
     "clsx": "catalog:"
   },
   "peerDependencies": {
