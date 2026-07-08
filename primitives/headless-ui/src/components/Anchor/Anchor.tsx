@@ -1,4 +1,4 @@
-export interface LinkProps extends Omit<
+export interface AnchorProps extends Omit<
   React.AnchorHTMLAttributes<HTMLAnchorElement>,
   "target" | "rel" | "aria-disabled" | "aria-current"
 > {
@@ -7,7 +7,7 @@ export interface LinkProps extends Omit<
   isExternal?: boolean;
 }
 
-export function Link({
+export function Anchor({
   children,
   href,
   onClick,
@@ -16,7 +16,7 @@ export function Link({
   isDisabled = false,
   as: Component = "a",
   ...rest
-}: Readonly<LinkProps>) {
+}: Readonly<AnchorProps>) {
   const hrefExternal =
     !!href && (href.includes("://") || href.startsWith("//"));
   const newTab = isExternal ?? hrefExternal;
