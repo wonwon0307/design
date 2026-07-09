@@ -1,10 +1,6 @@
 import { render } from "@testing-library/react";
 
-import { IconButton } from "@/IconButton";
-
-vi.mock("@wondesign/icons", () => ({
-  AppIcon: ({ icon }: { icon: string }) => <span>{icon}</span>,
-}));
+import { IconButton } from "@/Icon";
 
 describe("IconButton", () => {
   it("renders children mode correctly", () => {
