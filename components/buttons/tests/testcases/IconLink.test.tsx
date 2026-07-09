@@ -1,24 +1,20 @@
 import { render } from "@testing-library/react";
 
-import { IconButton } from "@/IconButton";
+import { IconLink } from "@/Icon";
 
-vi.mock("@wondesign/icons", () => ({
-  AppIcon: ({ icon }: { icon: string }) => <span>{icon}</span>,
-}));
-
-describe("IconButton", () => {
+describe("IconLink", () => {
   it("renders children mode correctly", () => {
     const { getByText } = render(
-      <IconButton>
+      <IconLink>
         <span>Icon</span>
-      </IconButton>,
+      </IconLink>,
     );
 
     expect(getByText("Icon")).toBeTruthy();
   });
 
   it("renders icon mode correctly", () => {
-    const { getByText } = render(<IconButton icon="check-fill" />);
+    const { getByText } = render(<IconLink icon="check-fill" />);
 
     expect(getByText("check-fill")).toBeTruthy(); // mocked in line 5
   });
