@@ -1,13 +1,15 @@
 import { createContext, useContext } from "react";
+import type { Shortkey } from "@wondesign/shortkeys";
 
 type SidebarContextValue = {
   // states
+  collapse: "hide" | "icons" | "disable";
   state: "closed" | "collapsed" | "expanded";
-  isDisabled: boolean;
   toggleSidebar: () => void;
   isMobile: boolean;
   // implementation details
   side: "left" | "right";
+  keyboardShortkey: Shortkey | null;
   ariaKeyshortcuts: string | undefined;
   contentId: string;
 };

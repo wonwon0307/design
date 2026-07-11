@@ -58,11 +58,12 @@ export function SidebarProvider({
 
   const contextValue = useMemo(
     () => ({
+      collapse,
       state: finalState,
-      isDisabled: collapse === "disable",
       toggleSidebar,
       isMobile,
       side,
+      keyboardShortkey,
       ariaKeyshortcuts,
       contentId,
     }),
@@ -72,6 +73,7 @@ export function SidebarProvider({
       toggleSidebar,
       isMobile,
       side,
+      keyboardShortkey,
       ariaKeyshortcuts,
       contentId,
     ],
