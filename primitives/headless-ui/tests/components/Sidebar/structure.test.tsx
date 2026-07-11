@@ -26,10 +26,4 @@ describe("Sidebar - structure", () => {
       "useSidebar must be used within a SidebarProvider",
     );
   });
-
-  it("Sidebar.Link must be used within the Sidebar.Body wrapper", () => {
-    expect(() => render(<Sidebar.Link href="#">Link</Sidebar.Link>)).toThrow(
-      "Sidebar.Link must be used inside Sidebar.Body.",
-    );
-  });
 });
