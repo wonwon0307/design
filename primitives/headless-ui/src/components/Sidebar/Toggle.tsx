@@ -1,9 +1,13 @@
 import { Button, type ButtonProps } from "@/components/Button";
 import { useSidebar } from "./_internals/contexts";
 
-export function SidebarToggle({ children, onClick, ...rest }: ButtonProps) {
+export function SidebarToggle({
+  children,
+  onClick,
+  ...rest
+}: Readonly<ButtonProps>) {
   const {
-    isDisabled,
+    collapse,
     state,
     toggleSidebar,
     contentId,
@@ -25,7 +29,7 @@ export function SidebarToggle({ children, onClick, ...rest }: ButtonProps) {
     <Button
       {...rest}
       onClick={handleClick}
-      isDisabled={isDisabled}
+      isDisabled={collapse === "disable"}
       aria-controls={contentId}
       aria-expanded={isOpen}
       aria-keyshortcuts={ariaKeyshortcuts}
