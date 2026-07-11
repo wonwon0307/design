@@ -1,4 +1,4 @@
-import { SidebarBodyContext, useSidebar } from "./_internals/contexts";
+import { useSidebar } from "./_internals/contexts";
 
 export interface SidebarBodyProps extends Omit<
   React.HTMLAttributes<HTMLElement>,
@@ -6,13 +6,11 @@ export interface SidebarBodyProps extends Omit<
 > {
   children: React.ReactNode;
   scope?: "app" | "page";
-  appearance?: "default" | "floating" | "inset";
 }
 
 export function SidebarBody({
   children,
   scope = "app",
-  appearance = "default",
   "aria-label": ariaLabel = scope === "app" ? "Sidebar" : undefined,
   ...rest
 }: Readonly<SidebarBodyProps>) {
@@ -22,20 +20,17 @@ export function SidebarBody({
   const isHidden = state === "closed";
 
   return (
-    <SidebarBodyContext value={true}>
-      <Component
-        {...rest}
-        aria-label={ariaLabel}
-        aria-hidden={isHidden ? true : undefined}
-        id={contentId}
-        inert={isHidden ? true : undefined}
-        data-state={state}
-        data-appearance={appearance}
-        data-side={side}
-        data-device={isMobile ? "mobile" : "desktop"}
-      >
-        {children}
-      </Component>
-    </SidebarBodyContext>
+    <Component
+      {...rest}
+      aria-label={ariaLabel}
+      aria-hidden={isHidden ? true : undefined}
+      id={contentId}
+      inert={isHidden ? true : undefined}
+      data-state={state}
+      data-side={side}
+      data-device={isMobile ? "mobile" : "desktop"}
+    >
+      {children}
+    </Component>
   );
 }
