@@ -14,6 +14,9 @@ export { SidebarToggle } from "./Toggle";
 export { SidebarLink } from "./Link";
 export { SidebarProvider } from "./Provider";
 
+// context
+export { useSidebar } from "./_internals/contexts";
+
 // types
 export type { SidebarProps } from "./Provider";
 export type { ButtonProps as SidebarToggleProps } from "@/components/Button";
