@@ -1,7 +1,5 @@
-import { useContext } from "react";
-
 import { Anchor, type AnchorProps } from "@/components/Anchor";
-import { SidebarBodyContext, useSidebar } from "./_internals/contexts";
+import { useSidebar } from "./_internals/contexts";
 
 export interface SidebarLinkProps extends AnchorProps {
   isActive?: boolean;
@@ -15,12 +13,6 @@ export function SidebarLink({
   isExternal = false,
   ...rest
 }: Readonly<SidebarLinkProps>) {
-  const isInsideNav = useContext(SidebarBodyContext);
-
-  if (!isInsideNav) {
-    throw new Error("Sidebar.Link must be used inside Sidebar.Body.");
-  }
-
   const { state, isMobile } = useSidebar();
 
   return (
