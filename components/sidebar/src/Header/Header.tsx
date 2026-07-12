@@ -15,7 +15,7 @@ export function SidebarHeader({
   icon,
   className,
   style,
-}: SidebarHeaderProps) {
+}: Readonly<SidebarHeaderProps>) {
   const { state } = useSidebar();
 
   return (

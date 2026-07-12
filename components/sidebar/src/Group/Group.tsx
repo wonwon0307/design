@@ -27,7 +27,7 @@ export function SidebarGroup({
   "aria-label": ariaLabel,
   className,
   style,
-}: SidebarGroupProps) {
+}: Readonly<SidebarGroupProps>) {
   const { state } = useSidebar();
 
   if (state === "collapsed") {
