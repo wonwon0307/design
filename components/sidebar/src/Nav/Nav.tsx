@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 import { styles } from "./styles.css";
 
-interface SidebarNavProps extends Omit<
+export interface SidebarNavProps extends Omit<
   React.HTMLAttributes<HTMLElement>,
   "children"
 > {

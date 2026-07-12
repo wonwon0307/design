@@ -1,16 +1,22 @@
 {
-  "name": "@wondesign/sidebar",
-  "description": "WonDesign - Sidebar",
+  "name": "@wondesign/ui",
+  "description": "WonDesign - Design System UI components",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "keywords": [
-    "sidebar",
-    "navigation",
+    "design-system",
+    "ui",
+    "reset-css",
     "react",
     "typescript"
   ],
   "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./styles.css": "./dist/styles.css",
     "./*": {
       "types": "./dist/*/index.d.mts",
       "default": "./dist/*/index.mjs"
@@ -21,15 +27,21 @@
     "build": "tsdown",
     "dev": "tsdown --watch",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "icons": "svg2tsx && prettier --write ./src/atoms/Icons/ --log-level silent"
   },
   "devDependencies": {
     "@vanilla-extract/css": "catalog:",
     "@vanilla-extract/recipes": "catalog:",
     "@vanilla-extract/rollup-plugin": "catalog:",
+    "@wondesign/buttons": "workspace:*",
     "@wondesign/headless-ui": "workspace:*",
     "@wondesign/icons": "workspace:*",
+    "@wondesign/reset-css": "workspace:*",
+    "@wondesign/sidebar": "workspace:*",
+    "@wondesign/svg2tsx": "workspace:*",
     "@wondesign/texts": "workspace:*",
+    "@wondesign/theme": "workspace:*",
     "@wondesign/tokens": "workspace:*",
     "clsx": "catalog:"
   },
