@@ -265,6 +265,55 @@ importers:
         specifier: ^29.1.1
         version: 29.1.1
 
+  packages/ui:
+    dependencies:
+      react:
+        specifier: ^19
+        version: 19.2.4
+      react-dom:
+        specifier: ^19
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@vanilla-extract/css':
+        specifier: 'catalog:'
+        version: 1.20.1
+      '@vanilla-extract/recipes':
+        specifier: 'catalog:'
+        version: 0.5.7(@vanilla-extract/css@1.20.1)
+      '@vanilla-extract/rollup-plugin':
+        specifier: 'catalog:'
+        version: 1.5.3(rollup@4.62.2)
+      '@wondesign/buttons':
+        specifier: workspace:*
+        version: link:../../components/buttons
+      '@wondesign/headless-ui':
+        specifier: workspace:*
+        version: link:../../primitives/headless-ui
+      '@wondesign/icons':
+        specifier: workspace:*
+        version: link:../../components/icons
+      '@wondesign/reset-css':
+        specifier: workspace:*
+        version: link:../../primitives/reset-css
+      '@wondesign/sidebar':
+        specifier: workspace:*
+        version: link:../../components/sidebar
+      '@wondesign/svg2tsx':
+        specifier: workspace:*
+        version: link:../../primitives/svg2tsx
+      '@wondesign/texts':
+        specifier: workspace:*
+        version: link:../../components/texts
+      '@wondesign/theme':
+        specifier: workspace:*
+        version: link:../../primitives/theme
+      '@wondesign/tokens':
+        specifier: workspace:*
+        version: link:../../primitives/tokens
+      clsx:
+        specifier: 'catalog:'
+        version: 2.1.1
+
   primitives/colors: {}
 
   primitives/headless-ui:
