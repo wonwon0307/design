@@ -1,10 +1,10 @@
 import {
   SidebarBody as Wrapper,
-  useSidebar,
   type SidebarBodyProps as Props,
 } from "@wondesign/headless-ui/Sidebar";
 import clsx from "clsx";
 
+import { useSidebar } from "@/core";
 import { styles } from "./styles.css";
 
 export interface SidebarProps extends Props {

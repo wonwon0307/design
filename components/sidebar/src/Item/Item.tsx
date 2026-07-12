@@ -1,7 +1,8 @@
 import { Collapsible } from "@wondesign/headless-ui/Collapsible";
-import { SidebarLink, useSidebar } from "@wondesign/headless-ui/Sidebar";
+import { SidebarLink } from "@wondesign/headless-ui/Sidebar";
 import { Tooltip } from "@wondesign/headless-ui/Tooltip";
 
+import { useSidebar } from "@/core";
 import { styles } from "./styles.css";
 
 export interface SidebarItemProps extends MainProps {

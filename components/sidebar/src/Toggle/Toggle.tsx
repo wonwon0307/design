@@ -1,12 +1,12 @@
 import {
   SidebarToggle as Button,
-  useSidebar,
   type SidebarToggleProps as Props,
 } from "@wondesign/headless-ui/Sidebar";
 import { Tooltip } from "@wondesign/headless-ui/Tooltip";
 import { KeyboardGroup } from "@wondesign/texts/Keyboard";
 import clsx from "clsx";
 
+import { useSidebar } from "@/core";
 import { SidebarToggleIcon } from "./Icon";
 import { styles } from "./styles.css";
 
