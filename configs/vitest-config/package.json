@@ -8,9 +8,9 @@
     "./shared": "./shared.js"
   },
   "devDependencies": {
-    "@vanilla-extract/vite-plugin": "^5.2.3",
-    "@vitejs/plugin-react": "^6.0.3",
-    "@vitest/coverage-v8": "^4.1.9",
+    "@vanilla-extract/vite-plugin": "^5.2.5",
+    "@vitejs/plugin-react": "^6.0.4",
+    "@vitest/coverage-v8": "^4.1.10",
     "jsdom": "^29.1.1"
   }
 }
